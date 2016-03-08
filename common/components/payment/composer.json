@@ -1,0 +1,31 @@
+{
+  "name": "bbcsky/yii2-payment",
+
+  "type": "yii2-extension",
+
+  "description": "The yii2 payment extension for alipay and weixin",
+  "keywords": ["yii2", "payment", "alipay", "weixin", "app pay"],
+  "license": "BSD-3-Clause",
+  "minimum-stability": "dev",
+  "support": {
+    "source": "https://github.com/bbcsky/yii2-payment",
+    "wiki": "https://github.com/bbcsky/yii2-payment/wiki",
+    "issues": "https://github.com/bbcsky/yii2-payment/issues"
+  },
+  "authors": [
+    {
+      "name": "bbcsky zhou",
+      "email": "bbcsky@gmail.com"
+    }
+  ],
+
+  "require": {
+    "yiisoft/yii2": "*"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "bbcsky\\payment\\": ""
+    }
+  }
+}
