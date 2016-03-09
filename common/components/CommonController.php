@@ -18,6 +18,7 @@ class CommonController extends Controller
     private $_controllerId;
     private $_actionId;
 
+    public $defaultAction = 'index';
     //基类初始化
     public function init()
     {
@@ -28,6 +29,7 @@ class CommonController extends Controller
         defined('FRONT_ROOT') or define('FRONT_ROOT', Medeen::getAppParam('front_path','/data/image.medeen.com'));
         //前端文件http路径  供前端 js  css images uploads使用，正式环境会改为
         defined('FRONT_PUBLIC') or define('FRONT_PUBLIC', Medeen::getAppParam('imagecdn_base_url','http://imagecdn.medeen.com'));
+        Medeen::setAlias("@msshost", Medeen::getAppParam('mss_base_url','http://mss.medeen.com'));
     }
 
     //提供ajax或者jsonp返回对象
@@ -46,7 +48,7 @@ class CommonController extends Controller
             if(Medeen::getRequest()->getIsAjax())
             {
                 Medeen::setResponseFormat(Response::FORMAT_JSON);
-                echo Json::encode($result);
+                echo  Json::encode($result);
                 return;
             }
         }else{

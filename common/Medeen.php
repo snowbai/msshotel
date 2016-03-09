@@ -301,7 +301,6 @@ class Medeen extends \Yii
      * @since 0.0.1
      * @param {float} $price 以元为单位的金额数值
      * @return {string}
-     * @example \Yii::$app->payment->getCapitalCny($price);
      */
     public static function getCapitalCny($price){
         if($price > 999999999999999){
@@ -354,7 +353,6 @@ class Medeen extends \Yii
      * @param {string} [$separator=''] 规定用作千位分隔符的字符串
      * @param {string} [$decimalpoint='.'] 规定用作小数点的字符串, 默认'.'
      * @return {number|float}
-     * @example \Yii::$app->payment->getYuans($cents, $float, $decimals, $separator, $decimalpoint);
      */
     public static function getYuans($cents, $float = false, $decimals = 2, $separator = '', $decimalpoint = '.')
     {

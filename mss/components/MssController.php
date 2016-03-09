@@ -33,7 +33,7 @@ class MssController extends CommonController
         $this->g_id = Medeen::getGetValue('g_id',1);
         $this->h_id = Medeen::getGetValue('h_id',1);
         //$this->getHotelInfo($this->g_id,$this->h_id);
-        Hotel::model()->count(['h_id'=>$this->h_id]);
+        //Hotel::model()->count(['h_id'=>$this->h_id]);
     }
 
     protected function getHotelInfo($g_id, $h_id)

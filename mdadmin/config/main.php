@@ -26,8 +26,18 @@ return [
                 ],
             ],
         ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
+        'session' => [
+            'class' => 'yii\web\Session',
+            'Name' => 'mdadmin_sessionid',
+            'UseCookies' => true,
+        ],
+        'urlManager' => [
+            'showScriptName' => false,
+            'enablePrettyUrl' => true,
+            'rules' => [
+                '<srouce:wx_><contoller:\w+>/<action:\w+>' => 'test/index',
+                '<contoller:\w+>/<action:\w+>' => '<contoller>/<action>',
+            ],
         ],
     ],
     'params' => $params,

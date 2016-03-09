@@ -5,7 +5,7 @@ use mss\components\MssController;
 use common\Medeen;
 use Yii;
 use yii\web\Response;
-
+use mss\components\TestExportComponent;
 /**
  * Site controller
  */
@@ -26,6 +26,8 @@ class TestController extends MssController
       //return \Yii::$app->db1;
       //var_dump(Yii::$app);
       //return $this->render_json(true,['oo'=>'xxxxx0'],[]);
+      $tst = new TestExportComponent();
+      $tst->export('nimei','huairen');
       return ['2134','2154155'=>'xxxxx'];
     }
 
